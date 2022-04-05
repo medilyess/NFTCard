@@ -1,0 +1,132 @@
+/*
+## Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap');
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --main-BG: hsl(217, 54%, 11%);
+    --Card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    background-color: var(--main-BG);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 450px;
+    background-color: var(--Card-BG);
+    color: var(--Soft-blue);
+    padding: 25px 25px;
+    border-radius: 2%;
+    font-weight: 300;
+    line-height: 26px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.card h2 {
+    font-weight: 600;
+    color: var(--White);
+    font-size: 22px;
+    line-height: 20px;
+    margin: 20px 0 10px 0;
+}
+
+.card h2:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.nft-card-img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    margin: 50px 0;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 20px;
+}
+
+.time,
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.time img,
+.price img {
+    margin-right: 5px;
+}
+
+.price:first-child {
+    color: var(--Cyan);
+}
+
+.img-over {
+    background-color: var(--Cyan);
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: 25px;
+    left: 25px;
+    border-radius: 2%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-over:hover {
+    opacity: 50%;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+}
+
+.creator img {
+    width: 50px;
+    margin-right: 20px;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+
+.creator span {
+    color: var(--White);
+}
+
+.creator span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
